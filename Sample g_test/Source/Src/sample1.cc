@@ -31,7 +31,12 @@
 //
 // Author: wan@google.com (Zhanyong Wan)
 
+#include <iostream>
+#include <conio.h>
+
 #include "sample1.h"
+
+using namespace std;
 
 // Returns n! (the factorial of n).  For negative n, n! is defined to be 1.
 int Factorial(int n) {
@@ -65,4 +70,24 @@ bool IsPrime(int n) {
 
   // n has no integer factor in the range (1, n), and thus is prime.
   return true;
+}
+
+int main (void)
+{
+	// variable declaration
+	int a,b;
+	// calling all functions
+	a = Factorial(10);
+	b = IsPrime(25);
+
+	cout << "VALUE of Factorial is :" << a;
+	if (b == 0)
+
+		cout << "\nGiven Number is Prime" ;
+	else
+		cout << "\nGiven Number is not a Prime" ;
+
+	getchar();
+
+	return 0;
 }
